@@ -1,0 +1,61 @@
+padding-increases space between border of box and content of box (andar jo cheez hai uska khel)
+margin-increases space between borders of your box and borders of adjacent boxes (bahir ka khel)
+border-outline jese page ki hoti hai
+types of boxes (how the box behaves in terms of page and other boxes on page)
+
+types of display types in boxes
+inner display type - andar jo cheezain hain unko kesay align krna
+outer display type - bahir ke saath kesa bartao rakhna
+
+In a nutshell, the inner display type determines how the boxes inside the element behave while the outer display type dictates how the box will display alongside other elements in the same formatting context.
+The outer display takes two values, block and inline, while inner display takes flex, grid, ruby, and others.
+
+if outer display type=block
+    new line, width and height apply, margin,padding push kren gin
+    examples: para with border, a list with display:flex, a block paragraph which has span element span element default inline hoga but u set it to display:block
+if outer display=inline
+    not new line, width height donut apply,not cause oter bozes to move away
+    examples: <span>, <ul> set to display:inline-flex
+display: flex makes the container into a flex container which arranges item in row form by default
+ Changing the value of the display property can change whether the outer display type of a box is block or inline
+
+BOX MODEL (imagine there are 4 boxes u need to deal with)
+content box -width height inline-size, block-size
+padding box- padding
+border box- border
+margin box- margin
+
+ALTERNATIVE BOX-MODEL
+standard box model: agar border set kar rahen hain to uska size add hoga box ki width or height mn
+alternative: agar border set krte ho to box ki width or height mn hi use use hoga matlab agar the bigger the model the smaller the content box is
+how: set box-sizing to border-box
+
+BOX-SIZING
+default setting is
+box-sizing: contnent-box
+This means that the width and height of an element are based on its content, excluding the padding, border, and margin.
+
+for alternate
+box-sizing:border-box
+For example, if you have a div element with a width of 200px, a padding of 20px, and a border of 10px, the actual width of the element will be 200px (the padding and border are included in the calculation). This can make your layout more consistent and predictable.
+
+* universal selector
+ You can also use the universal selector (*) to apply the same box-sizing value to all elements in your document.
+
+HOW TO CENTER ELEMENT IN A BOX
+you can horizontally center an element using 
+margin:auto
+two things are done to center this element horizontally within the available space:
+
+    The element is given a specified width
+    The left and right margins are set to auto
+Without the specified width, the auto values would essentially have no effect,
+
+BLOCK ELEMENT
+heir default style is display: block. By default, block elements will appear on the page stacked atop each other, each new element starting on a new line
+div
+
+INLINE ELEMENT
+nline elements, however, do not start on a new line. They appear in line with whatever elements they are placed beside. A clear example of an inline element is a link, or <a> tag.
+padding and margin behave differently on inline elements. In general, you do not want to try to put extra padding or margin on inline elements.
+span
